@@ -1,0 +1,14 @@
+db/**
+simulation/**
+output_files/**
+incremental_db/**
+**.bak
+src/flowSwitch.v.bak
+incremental_db/**
+db/**
+output_files/**
+tests/generated_data/**
+tests/rtl_waveforms/**
+tests/testbenches/build/**
+**.vcd
+FPGA_PCM2DSD/*
