@@ -1,0 +1,250 @@
+Worst-Case Timing Paths report for DSD
+Sun Nov 26 03:11:56 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Setup: 'I2S_BCKorDSDCLK'
+  3. Hold: 'I2S_BCKorDSDCLK'
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'I2S_BCKorDSDCLK'                                                                                                                                                                          ;
++--------+------------------------------------------------------+------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node                                            ; To Node                                              ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------------------+------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; -5.343 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 17.748     ;
+; -4.940 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 17.345     ;
+; -2.348 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.753     ;
+; -2.044 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[0]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.449     ;
+; -2.005 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[1]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.410     ;
+; -1.947 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[4]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.352     ;
+; -1.807 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[4]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.212     ;
+; -1.802 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[1]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.207     ;
+; -1.788 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[2]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.193     ;
+; -1.757 ; I2S_BCKorDSDCLK                                      ; DSDCLK                                               ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 22.557     ;
+; -1.705 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[10]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.110     ;
+; -1.662 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[6]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.067     ;
+; -1.608 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[5]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.013     ;
+; -1.599 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[5]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 14.004     ;
+; -1.581 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[7]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.986     ;
+; -1.578 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[8]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.983     ;
+; -1.508 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[6]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.913     ;
+; -1.456 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[3]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.861     ;
+; -1.453 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[2]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.858     ;
+; -1.417 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[3]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.822     ;
+; -1.361 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[8]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.766     ;
+; -1.246 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[7]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.651     ;
+; -1.010 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[11]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.415     ;
+; -0.890 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[15]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.295     ;
+; -0.857 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[9]   ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.262     ;
+; -0.728 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[10]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.133     ;
+; -0.688 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[9]   ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 13.093     ;
+; -0.462 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[12]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.867     ;
+; -0.410 ; I2S_DATAorDSD1                                       ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 81.600       ; 0.000      ; 42.010     ;
+; -0.399 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[11]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.804     ;
+; -0.330 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[13]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.735     ;
+; -0.324 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[12]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.729     ;
+; -0.303 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[14]  ; DSDLEFT                                              ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.708     ;
+; -0.264 ; I2S_LRCKorDSD2                                       ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 81.600       ; 0.000      ; 41.864     ;
+; -0.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[13]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.551     ;
+; -0.058 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[15]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.463     ;
+; 0.085  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[14]  ; DSDRIGHT                                             ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; -8.395     ; 12.320     ;
+; 29.411 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 11.056     ;
+; 29.509 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 10.958     ;
+; 31.333 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[15]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 9.134      ;
+; 31.333 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[14]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 9.134      ;
+; 31.333 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[13]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 9.134      ;
+; 31.554 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[12]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.913      ;
+; 31.554 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[11]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.913      ;
+; 31.554 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[10]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.913      ;
+; 31.554 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[9]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.913      ;
+; 31.554 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[8]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.913      ;
+; 31.567 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[15]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.900      ;
+; 31.567 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[14]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.900      ;
+; 31.567 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[13]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.900      ;
+; 31.800 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[12]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.667      ;
+; 31.914 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[11]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.553      ;
+; 31.914 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[10]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.553      ;
+; 31.914 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[9]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.553      ;
+; 31.914 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[8]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.553      ;
+; 32.101 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.366      ;
+; 32.418 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[7]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 8.049      ;
+; 32.541 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[6]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.926      ;
+; 32.642 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[4]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.825      ;
+; 32.647 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[1]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.820      ;
+; 32.664 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[5]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.803      ;
+; 32.710 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.757      ;
+; 32.744 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[10]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.723      ;
+; 32.749 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[1]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.718      ;
+; 32.778 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[7]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.689      ;
+; 32.787 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[4]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.680      ;
+; 32.807 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[4]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.660      ;
+; 32.810 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[6]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.657      ;
+; 32.810 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[5]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.657      ;
+; 32.810 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[4]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.657      ;
+; 32.810 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[3]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.657      ;
+; 32.850 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[5]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.617      ;
+; 32.871 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[8]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.596      ;
+; 32.880 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[3]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.587      ;
+; 32.941 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[6]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.526      ;
+; 32.966 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[2]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.501      ;
+; 32.996 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[2]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.471      ;
+; 33.032 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[3]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.435      ;
+; 33.092 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[6]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.375      ;
+; 33.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[5]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.321      ;
+; 33.173 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[7]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.294      ;
+; 33.203 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[7]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.264      ;
+; 33.298 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[3]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.169      ;
+; 33.393 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[8]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.074      ;
+; 33.439 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[11]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 7.028      ;
+; 33.640 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[2]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.827      ;
+; 33.646 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[2]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.821      ;
+; 33.761 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[9]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.706      ;
+; 33.782 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0] ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[1]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.685      ;
+; 33.820 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[1]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.647      ;
+; 33.864 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[15]  ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.603      ;
+; 33.897 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[9]   ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.570      ;
+; 34.026 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[10]  ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.441      ;
+; 34.125 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[12]  ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.342      ;
+; 34.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[12]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.321      ;
+; 34.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[11]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.321      ;
+; 34.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[10]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.321      ;
+; 34.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[9]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.321      ;
+; 34.146 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[8]   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.321      ;
+; 34.159 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]   ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[15]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 6.308      ;
++--------+------------------------------------------------------+------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'I2S_BCKorDSDCLK'                                                                                                                                                                                 ;
++--------+---------------------------------------------------------+---------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node                                               ; To Node                                                 ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------+---------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; 1.379  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[5]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[6]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.600      ;
+; 1.396  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[1]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[2]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.617      ;
+; 1.397  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[12] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[13] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.618      ;
+; 1.398  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[25] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[26] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.619      ;
+; 1.398  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[9]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[10] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.619      ;
+; 1.400  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[24] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[25] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.621      ;
+; 1.409  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[0]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[1]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.630      ;
+; 1.416  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[29] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[30] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.637      ;
+; 1.416  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[27] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[28] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.637      ;
+; 1.418  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[11] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[12] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.639      ;
+; 1.421  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[13] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[14] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.642      ;
+; 1.421  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[7]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[8]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.642      ;
+; 1.426  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[18] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[19] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.647      ;
+; 1.433  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[19] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[20] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.654      ;
+; 1.435  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[17] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[18] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.656      ;
+; 1.659  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[15] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[16] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.880      ;
+; 1.660  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[20] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[21] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.881      ;
+; 1.660  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[3]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[4]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.881      ;
+; 1.665  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[2]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[3]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.886      ;
+; 1.668  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[14] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[15] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.889      ;
+; 1.670  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[8]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[9]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.891      ;
+; 1.690  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[30] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[31] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.911      ;
+; 1.694  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[28] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[29] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.915      ;
+; 1.748  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[26] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[27] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 1.969      ;
+; 1.847  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[6]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[7]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.068      ;
+; 1.864  ; I2S_LRCKorDSD2                                          ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 41.864     ;
+; 2.010  ; I2S_DATAorDSD1                                          ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 42.010     ;
+; 2.447  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[10] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[11] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.668      ;
+; 2.467  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[22] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[23] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.688      ;
+; 2.479  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[16] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[17] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.700      ;
+; 2.512  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[23] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[24] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.733      ;
+; 2.536  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[21] ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[22] ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 2.757      ;
+; 2.557  ; I2S_BCKorDSDCLK                                         ; DSDCLK                                                  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 22.557     ;
+; 3.008  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[4]  ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[5]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 0.000      ; 3.229      ;
+; 4.261  ; I2S_LRCKorDSD2                                          ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|WCLK_Buf        ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 8.395      ; 32.877     ;
+; 5.768  ; I2S_DATAorDSD1                                          ; DSM_1bit:DSM|I2S_PCM_Converter:b2v_inst|DATA_LR_Buf[0]  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 0.000        ; 8.395      ; 34.384     ;
+; 41.270 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.075     ;
+; 41.476 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[14]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.281     ;
+; 41.630 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[15]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.435     ;
+; 41.746 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[13]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.551     ;
+; 41.863 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[14]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.668     ;
+; 41.910 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[12]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.715     ;
+; 41.930 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[13]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.735     ;
+; 41.974 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[11]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.779     ;
+; 42.048 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[12]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 12.853     ;
+; 42.181 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[8]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[8]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 1.602      ;
+; 42.238 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[9]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.043     ;
+; 42.290 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[10]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.095     ;
+; 42.407 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[9]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.212     ;
+; 42.462 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[15]     ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.267     ;
+; 42.551 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0]    ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.356     ;
+; 42.558 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[9]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[9]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 1.979      ;
+; 42.564 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[14]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[14]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 1.985      ;
+; 42.569 ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst12|QUANT_DATA_Buf    ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[16]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 1.990      ;
+; 42.569 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[16]     ; DSM_1bit:DSM|DSM_MAXIMIZER:b2v_inst13|DSDDATA_Buf[0]    ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 1.990      ;
+; 42.580 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[14]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[14]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.001      ;
+; 42.584 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[11]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.389     ;
+; 42.587 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[0]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[0]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.008      ;
+; 42.602 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[1]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[1]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.023      ;
+; 42.818 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[11]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[11]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.239      ;
+; 42.819 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[15]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[15]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.240      ;
+; 42.819 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[11]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[11]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.240      ;
+; 42.819 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[10]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[10]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.240      ;
+; 42.823 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[13]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[13]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.244      ;
+; 42.829 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[7]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.634     ;
+; 42.832 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[10]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[10]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.253      ;
+; 42.843 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[13]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[13]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.264      ;
+; 42.961 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[8]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.766     ;
+; 43.017 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[3]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.822     ;
+; 43.039 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[2]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.844     ;
+; 43.056 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[3]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.861     ;
+; 43.079 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[6]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.884     ;
+; 43.107 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[12]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[12]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.528      ;
+; 43.125 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[12]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[12]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.546      ;
+; 43.158 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[5]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.963     ;
+; 43.164 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[7]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.969     ;
+; 43.168 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[5]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.973     ;
+; 43.170 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[0]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[0]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.591      ;
+; 43.176 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[6]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[6]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.597      ;
+; 43.178 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[8]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 13.983     ;
+; 43.233 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[6]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 14.038     ;
+; 43.267 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[10]     ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 14.072     ;
+; 43.284 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[5]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[5]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.705      ;
+; 43.309 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[5]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[5]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.730      ;
+; 43.315 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[14]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[13]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.736      ;
+; 43.332 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[11]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[10]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.753      ;
+; 43.353 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[6]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[6]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.774      ;
+; 43.354 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[4]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 14.159     ;
+; 43.357 ; I2S_BCKorDSDCLK                                         ; DSDCLK                                                  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 22.557     ;
+; 43.371 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[4]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[4]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.792      ;
+; 43.374 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[2]      ; DSDLEFT                                                 ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 14.179     ;
+; 43.376 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[1]      ; DSDRIGHT                                                ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; -8.395     ; 14.181     ;
+; 43.409 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[12]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[11]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.830      ;
+; 43.417 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[3]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[3]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.838      ;
+; 43.424 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[13]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[12]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.845      ;
+; 43.425 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[14]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[13]     ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.846      ;
+; 43.425 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[3]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[3]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.846      ;
+; 43.429 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[10]     ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[9]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.850      ;
+; 43.435 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_neg[9]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst1|DATA_Latch_pos[8]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.856      ;
+; 43.435 ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_neg[9]      ; DSM_1bit:DSM|DSM_SIGMA:b2v_inst4|DATA_Latch_pos[8]      ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; -40.800      ; 0.000      ; 2.856      ;
++--------+---------------------------------------------------------+---------------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+
+

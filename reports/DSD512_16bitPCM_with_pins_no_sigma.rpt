@@ -1,0 +1,45 @@
+Setup: 'I2S_BCKorDSDCLK' report for DSD
+Sun Nov 26 03:18:35 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Setup: 'I2S_BCKorDSDCLK'
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup: 'I2S_BCKorDSDCLK'                                                                                          ;
++---------+-----------------+----------+-----------------+-----------------+--------------+------------+------------+
+; Slack   ; From Node       ; To Node  ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------+----------+-----------------+-----------------+--------------+------------+------------+
+; -30.936 ; I2S_DATAorDSD1  ; DSDLEFT  ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 31.736     ;
+; -30.368 ; I2S_LRCKorDSD2  ; DSDRIGHT ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 31.168     ;
+; -19.283 ; I2S_BCKorDSDCLK ; DSDCLK   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 20.400       ; 0.000      ; 19.683     ;
+; 1.117   ; I2S_BCKorDSDCLK ; DSDCLK   ; I2S_BCKorDSDCLK ; I2S_BCKorDSDCLK ; 40.800       ; 0.000      ; 19.683     ;
++---------+-----------------+----------+-----------------+-----------------+--------------+------------+------------+
+
+

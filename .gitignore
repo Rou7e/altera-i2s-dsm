@@ -1,5 +1,6 @@
 db/**
 simulation/**
+research/**
 output_files/**
 incremental_db/**
 **.bak
@@ -12,3 +13,4 @@ tests/rtl_waveforms/**
 tests/testbenches/build/**
 **.vcd
 FPGA_PCM2DSD/*
+greybox_tmp/**

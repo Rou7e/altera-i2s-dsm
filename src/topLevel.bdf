@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 48 392 224 408)
+	(rect 56 392 232 408)
 	(text "INPUT" (rect 133 0 169 13)(font "Arial" (font_size 6)))
 	(text "I2S_RST" (rect 9 0 66 15)(font "Arial" ))
 	(pt 176 8)
@@ -360,14 +360,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 456 256)
 )
 (connector
-	(pt 248 400)
-	(pt 248 272)
-)
-(connector
-	(pt 224 400)
-	(pt 248 400)
-)
-(connector
 	(pt 248 272)
 	(pt 272 272)
 )
@@ -426,6 +418,14 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 240 384)
 	(pt 424 384)
+)
+(connector
+	(pt 248 272)
+	(pt 248 400)
+)
+(connector
+	(pt 248 400)
+	(pt 232 400)
 )
 (junction (pt 224 352))
 (junction (pt 232 368))
