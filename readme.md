@@ -23,9 +23,9 @@
 | DSDCLK | Output | PIN_67 |
 | DSDLEFT | Output | PIN_68 |
 | DSDRIGHT | Output | PIN_69 |
-| I2S_BCKorDSDCLK | Input PIN_113 |
-| I2S_DATAorDSD1 | Input PIN_115 |
-| I2S_LRCKorDSD2 | Input PIN_114 |
+| I2S_BCKorDSDCLK | Input | PIN_113 |
+| I2S_DATAorDSD1 | Input | PIN_115 |
+| I2S_LRCKorDSD2 | Input | PIN_114 |
 | I2S_RST | Input | PIN_120 |
 |---|---|---|
 ## Заложенные режимы работы
