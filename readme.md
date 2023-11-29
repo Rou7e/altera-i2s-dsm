@@ -16,6 +16,18 @@
 ## Текущая платформа
 ### [EP4CE6E22C8N](https://www.ozon.ru/product/plis-programmiruemaya-logicheskaya-matritsa-fpga-ep4ce6e22c8n-cyclone-iv-1093914217/?asb=N5wYt%252BaH0qcwIBBNYhuIwLbHfrLuPQmWn5oLiPnM7Q0%253D&asb2=0UiveHWkGXrzK1n1i5V60SJhOzw3VAqL6g7dPZYsrvH12_H5DMWHWmFufp7zbxgf&avtc=1&avte=2&avts=1701128002&keywords=fpga+altera+ciclon+4)
 
+## Текущая распиновка
+| Название сигнала | Направление | Номер пина |
+|---|---|---|
+| DSD_ON | Input | PIN_121 |
+| DSDCLK | Output | PIN_67 |
+| DSDLEFT | Output | PIN_68 |
+| DSDRIGHT | Output | PIN_69 |
+| I2S_BCKorDSDCLK | Input PIN_113 |
+| I2S_DATAorDSD1 | Input PIN_115 |
+| I2S_LRCKorDSD2 | Input PIN_114 |
+| I2S_RST | Input | PIN_120 |
+|---|---|---|
 ## Заложенные режимы работы
 1) Тест на максимальной частоте: PCM32 на входе DSD512 на выходе 
 2) Тест на пониженной частоте: PCM32 в DSD64
