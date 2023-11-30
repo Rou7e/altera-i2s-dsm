@@ -1,4 +1,4 @@
-module tb3;
+module tb1;
 
   // Declare the signals for the testbench
   reg clk;
@@ -36,17 +36,18 @@ module tb3;
     zero2 = 1;
 	 d1 = 1;
 	 // Read data from external TXT file
-	 file_descriptor = $fopen("../generated_data/test3_I2S.txt", "r");
-	 outfd1 = $fopen("../rtl_waveforms/test3_DSD_LEFT.txt", "w");
-	 outfd2 = $fopen("../rtl_waveforms/test3_DSD_RIGHT.txt", "w");
-	 outfd3 = $fopen("../rtl_waveforms/test3_DSD_CLOCK.txt", "w");
+	 file_descriptor = $fopen("../generated_data/test4_I2S.txt", "r");
+	 outfd1 = $fopen("../rtl_waveforms/test4_DSD_LEFT.txt", "w");
+	 outfd2 = $fopen("../rtl_waveforms/test4_DSD_RIGHT.txt", "w");
+	 outfd3 = $fopen("../rtl_waveforms/test4_DSD_CLOCK.txt", "w");
     // Apply inputs based on the requirements
     while (d1) begin
 
 		 d1 = $fgets(str, file_descriptor);
 		 d2 = $sscanf(str, "%x", data);
+		 lrclk = data;
        resetsig = 0;   // Always one, this is actually NRST // now fixed in source
-       zero2 = 0;   // Always zero
+       zero2 = 1;   // Always one
 		 $fstrobeb(outfd1, DSDLEFT_sig);
 		 $fstrobeb(outfd2, DSDRIGHT_sig);
 		 $fstrobeb(outfd3, DSDCLK_sig);
@@ -63,12 +64,12 @@ module tb3;
   end
   
   always #5 clk = ~clk;
-  always #80 lrclk = ~lrclk; // flips every 16 ticks
+  always #160 lrclk = ~lrclk; // flips every 32 ticks
 	// create VCD for gtkwave
 	initial
 	begin
-		$dumpfile("tb3out.vcd");
-		$dumpvars(0,tb3);
+		$dumpfile("tb4out.vcd");
+		$dumpvars(0,tb1);
 		
 	end
 	// track signals

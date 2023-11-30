@@ -100,6 +100,7 @@ T1_DSDCLK = []
 
 with open("rtl_waveforms/test1_DSD_LEFT.txt" , "r") as f:
     lines = f.readlines()
+    print(len(lines))
     buff = 0;
     for line in range(len(lines)):
         # downsample to compare with PCM
@@ -112,9 +113,8 @@ with open("rtl_waveforms/test1_DSD_LEFT.txt" , "r") as f:
             buff = round(buff / 64)
             # upscale for lr channels
             T1_DSDLEFT.append(buff * 2 -1)
-            #T1_DSDLEFT.append(buff * 2 -1)
             buff = 0
-
+print(len(T1_DSDLEFT))
         
 #with open("rtl_waveforms/test1_DSD_RIGHT.txt" , "r") as f:
 #    lines = f.readlines()
@@ -126,12 +126,60 @@ with open("rtl_waveforms/test1_DSD_LEFT.txt" , "r") as f:
 #    for line in lines:
 #        T1_DSDCLK.append(int(line) * 2 -1)
         
-# Тест 4 на сквозной пропуск данных по поднятому флагу от конвертера: DSD512 в DSD512
-with open("generated_data/test4_I2S.txt" , "w") as f:
-    for i in range(2822):
-        f.write(str(y_DSD[i]) + "\n")
+# Тест 2 - интересует правый и левый DSD
+T2_DSDLEFT = []
+T2_DSDRIGHT = []
+T2_DSDCLK = []
 
+with open("rtl_waveforms/test2_DSD_LEFT.txt" , "r") as f:
+    lines = f.readlines()
+    buff = 0;
+    for line in range(len(lines)):
+        # downsample to compare with PCM
+        buff += int(lines[line])
+        if (line % 64 == 0):
+            # cut off startup latency
+            if (line < (1400*64)):
+                buff = 0
+                continue
+            buff = round(buff / 64)
+            # upscale for lr channels
+            T2_DSDLEFT.append(buff * 2 -1)
+            #T1_DSDLEFT.append(buff * 2 -1)
+            buff = 0
 
+T3_DSDLEFT = []
+T3_DSDRIGHT = []
+T3_DSDCLK = []
+
+with open("rtl_waveforms/test3_DSD_LEFT.txt" , "r") as f:
+    lines = f.readlines()
+    buff = 0;
+    for line in range(len(lines)):
+        # downsample to compare with PCM
+        buff += int(lines[line])
+        if (line % 64 == 0):
+            # cut off startup latency
+            if (line < (1400*64)):
+                buff = 0
+                continue
+            buff = round(buff / 64)
+            # upscale for lr channels
+            T3_DSDLEFT.append(buff * 2 -1)
+            #T1_DSDLEFT.append(buff * 2 -1)
+            buff = 0
+            
+T4_DSDLEFT = []
+T4_DSDRIGHT = []
+T4_DSDCLK = []
+
+with open("rtl_waveforms/test4_DSD_LEFT.txt" , "r") as f:
+    lines = f.readlines()
+    buff = 0;
+    for line in range(len(lines)):
+        T4_DSDLEFT.append(lines[line])
+
+        
 
 plt.figure()
 
@@ -146,24 +194,35 @@ plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], T1_DSDLEFT[0:plotlen], label="DSD
 #plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDCLK[0:2822], label="DSDCLK") 
 
 plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], x_LPCM_Hold[0:plotlen]/np.max(x_LPCM_Hold), label="PCM") # PCM
+
 plt.legend(loc="upper right")
 plt.xlabel("Time [s]")
 plt.ylabel("Normalized Amplitude")
 
 ax2 = plt.subplot(2, 2, 2)
 ax2.set_title("Test 2")
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_DSD[0:2822] * 2 - 1, label="DSD") # DSD
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_filtered[0:2822] * 2 - 1, label="Filtered DSD") # Filtered Data
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], x_LPCM_Hold[0:2822]/np.max(x_LPCM_Hold), label="PCM") # PCM
+plotlen = 1244
+startdsd = plotlen//2
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], y_DSD[0:plotlen] * 2 - 1, label="GOLDEN DSD", alpha=0.7) # DSD
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], T2_DSDLEFT[0:plotlen], label="DSDLEFT", alpha=0.7) 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDRIGHT[0:2822], label="DSDRIGHT") 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDCLK[0:2822], label="DSDCLK")
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], x_LPCM_Hold[0:plotlen]/np.max(x_LPCM_Hold), label="PCM") # PCM
 plt.legend(loc="upper right")
 plt.xlabel("Time [s]")
 plt.ylabel("Normalized Amplitude")
 
 ax3 = plt.subplot(2, 2, 3)
 ax3.set_title("Test 3")
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_DSD[0:2822] * 2 - 1, label="DSD") # DSD
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_filtered[0:2822] * 2 - 1, label="Filtered DSD") # Filtered Data
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], x_LPCM_Hold[0:2822]/np.max(x_LPCM_Hold), label="PCM") # PCM
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], y_DSD[0:plotlen] * 2 - 1, label="GOLDEN DSD", alpha=0.7) # DSD
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], T3_DSDLEFT[0:plotlen], label="DSDLEFT", alpha=0.7) 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDRIGHT[0:2822], label="DSDRIGHT") 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDCLK[0:2822], label="DSDCLK")
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], x_LPCM_Hold[0:plotlen]/np.max(x_LPCM_Hold), label="PCM") # PCM
 plt.legend(loc="upper right")
 plt.xlabel("Time [s]")
 plt.ylabel("Normalized Amplitude")
@@ -171,9 +230,13 @@ plt.ylabel("Normalized Amplitude")
 ax4 = plt.subplot(2, 2, 4)
 ax4.set_title("Test 4")
 
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_DSD[0:2822] * 2 - 1, label="DSD") # DSD
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], y_filtered[0:2822] * 2 - 1, label="Filtered DSD") # Filtered Data
-#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], x_LPCM_Hold[0:2822]/np.max(x_LPCM_Hold), label="PCM") # PCM
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], y_DSD[0:plotlen] * 2 - 1, label="GOLDEN DSD", alpha=0.7) # DSD
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], T4_DSDLEFT[0:plotlen], label="DSDLEFT", alpha=0.7) 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDRIGHT[0:2822], label="DSDRIGHT") 
+#plt.plot(np.arange(0, 1, 1/fs_DSD)[0:2822], T1_DSDCLK[0:2822], label="DSDCLK")
+
+plt.plot(np.arange(0, 1, 1/fs_DSD)[0:plotlen], x_LPCM_Hold[0:plotlen]/np.max(x_LPCM_Hold), label="PCM") # PCM
 plt.legend(loc="upper right")
 plt.xlabel("Time [s]")
 plt.ylabel("Normalized Amplitude")

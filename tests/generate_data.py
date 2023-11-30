@@ -125,8 +125,12 @@ with open("generated_data/test3_I2S.txt" , "w") as f:
             bitstring = '1' + bitstring
         for c in bitstring:
             f.write(c + "\n")
+        for c in range(16):
+            f.write("0" + "\n")
         for c in bitstring:
             f.write(c + "\n")
+        for c in range(16):
+            f.write("0" + "\n")
             
 # Тест 4 на сквозной пропуск данных по поднятому флагу от конвертера: DSD512 в DSD512
 with open("generated_data/test4_I2S.txt" , "w") as f:
